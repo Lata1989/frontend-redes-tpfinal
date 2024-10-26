@@ -1,6 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Home } from './pages/public/Home';
+import { Login } from './pages/public/Login';
+import { Verify } from './pages/public/Verify';
 
 export const App = () => {
   return(
@@ -8,12 +11,18 @@ export const App = () => {
       {/* <div className="text-red-600">App</div> */}
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={}></Route>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/login' element={<Login/>}></Route>
+          <Route path='/verify' element={<Verify/>}></Route>
+          <Route path='/' element={<Home/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
   );
 }
+
+// https://www.youtube.com/watch?v=3nL8e7I_9lo
+// 1:31:00
 
 // function App() {
 //   return (
